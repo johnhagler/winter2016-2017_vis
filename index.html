@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css'>
+  <link rel="stylesheet" href="style.css">
+
+
+  <script src='http://d3js.org/d3.v3.min.js'></script>
+
+  
+</head>
+<body>
+  <div class='container'>
+
+
+    <div class="row">
+      <div class="col-sm-8">
+        <h1><span id="location"></span> Daily High/Low Temperatures</h1>
+        <h2>Winter 2016/2017</h2>
+      </div>
+      <div class="col-sm-4">
+        <select name="location" id="" multiple class="form-control" style="margin-top:21px; height:60px;">
+          <option value="24243" selected="selected" autofocus>Yakima</option>
+          <option value="94239">Wenatchee</option>
+        </select>        
+      </div>
+    </div>
+    
+    <div id='chart'></div>
+    <p>Historical weather data from <a href="https://www.ncdc.noaa.gov/qclcd/QCLCD">NOAA Quality Controlled Local Climatological Data</a></p>
+    <p>Forecast weather data <a href="https://darksky.net">Powered by Dark Sky</a></p>
+
+  </div>
+
+  <script src="chart.js"></script>
+</body>
+</html>
