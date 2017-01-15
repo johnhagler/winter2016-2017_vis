@@ -1,0 +1,71 @@
+ * {
+  font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+}
+
+line {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+  opacity: .5;
+}
+
+.axis text {
+  font-size: 11px;
+  opacity: .5;
+}
+
+.temp-stream {
+  opacity: .5;
+}
+
+.temp-forecast-stream {
+  opacity: .25;
+}
+
+.legend circle {
+  opacity: .5;
+}
+
+line.freezing {
+  stroke: #18bc9c;
+  stroke-dasharray: 2, 2;
+}
+
+text.freezing {
+  fill:  #18bc9c;
+  font-size: 12px;
+}
+
+text.y.axis {
+  opacity: .5;
+}
+
+select {
+  overflow:hidden;
+}
+
+.forecast-bound {
+  stroke: black;
+  stroke-width: 1;
+  stroke: #18bc9c;
+  opacity: .25;
+
+}
+
+.forecast-text {
+  font-size: 11px;
+  opacity: .5;
+  fill: #18bc9c;
+}
+
+.temp-stream:hover {
+  opacity: 1;
+}
+.temp-forecast-stream:hover {
+  opacity: .75;
+}
