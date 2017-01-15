@@ -132,6 +132,8 @@
                     .attr('d', area(data.daily.data));
 
 
+
+                // show bounds of forecast data
                 var fcst_extents = d3.extent(data.daily.data, function(d) {
                     return new Date(d.time * 1000);
                 });
@@ -140,15 +142,18 @@
                 var forecast_bounds = svg.selectAll('.forecast-bound')
                     .data(fcst_extents);
 
+                d3.selectAll('.forecast-group').remove();
+                var forecast_group = svg.append('g').attr('class', 'forecast-group');
+
                 fcst_extents.forEach(function(d, i) {
-                    svg.append('line').attr('class', 'forecast-bound')
+                    forecast_group.append('line').attr('class', 'forecast-bound')
                         .attr('x1', x_scale(fcst_extents[i]))
                         .attr('y1', margin)
                         .attr('x2', x_scale(fcst_extents[i]))
                         .attr('y2', height - margin);
                 });
 
-                svg.append('text').attr('class', 'forecast-text')
+                forecast_group.append('text').attr('class', 'forecast-text')
                     .attr('transform',
                         'translate(' +
                         (x_scale(fcst_extents[0]) + 5) + ',' +
