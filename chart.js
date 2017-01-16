@@ -182,8 +182,15 @@
                 .entries(filtered);
 
             by_season = by_season.sort(function(a, b) {
-                return seasons.indexOf(a.key) > seasons.indexOf(b.key);
+                return seasons.indexOf(a.key) < seasons.indexOf(b.key);
             });
+
+            // hacky fix for IE not resorting properly
+            var temp = by_season
+            by_season = []
+            by_season.push(temp[1])
+            by_season.push(temp[0])
+
 
             d3.selectAll('.temp-stream').remove();
 
