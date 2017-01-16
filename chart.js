@@ -215,7 +215,7 @@
         updateTitle('Yakima')
 
         d3.select('[name=location]').on('change', function() {
-            updateTitle(this.selectedOptions[0].innerHTML);
+            updateTitle(this.options[this.selectedIndex].innerHTML);
             update(this.value);
         });
 
